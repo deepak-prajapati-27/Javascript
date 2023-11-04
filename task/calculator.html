@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .value {
+        font-size: 50px;
+      }
+      .button {
+        display: flex;
+        gap: 80px;
+      }
+      input {
+        padding: 20px 200px;
+      }
+      button {
+        padding: 20px 120px;
+        margin: 10px;
+        text-align: center;
+        font-size: 25px;
+      }
+      .calc {
+        border: 1px solid black;
+        margin: 100px;
+        border-radius: 10px;
+      }
+      .flex-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calc">
+      <div class="flex-box">
+        <div class="flex">
+          <label for="" class="value">First value</label>
+          <input type="text" />
+        </div>
+        <div class="flex">
+          <label for="" class="value">Second value</label>
+          <input type="text" />
+        </div>
+      </div>
+      <div class="button">
+        <button>+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
+      </div>
+    </div>
+  </body>
+</html>
