@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Converter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10% auto;
+        width: 90%;
+        background-color: aqua;
+        gap: 20px;
+        padding: 20px;
+      }
+      .child-div {
+        width: 100%;
+      }
+      .child-2-div button {
+        border: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        background-color: brown;
+      }
+      .text {
+        background-color: transparent;
+        width: 100%;
+        font-size: 20px;
+        border: none;
+        border: 1px solid #000000;
+        padding: 20px;
+      }
+      ::placeholder {
+        font-size: 20px;
+        color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="child-div">
+        <input type="text" class="text" placeholder="type anything" />
+      </div>
+      <div class="child-2-div">
+        <button>lowercase</button>
+        <button>uppercase</button>
+        <button>trim</button>
+        <button>find & Replace</button>
+        <button>character count</button>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>

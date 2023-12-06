@@ -3,59 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
+    <title>Function</title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      .value {
-        font-size: 50px;
-      }
-      .button {
-        display: flex;
-        gap: 80px;
-      }
-      input {
-        padding: 20px 200px;
-      }
       button {
-        padding: 20px 120px;
-        margin: 10px;
-        text-align: center;
-        font-size: 25px;
-      }
-      .calc {
-        border: 1px solid black;
-        margin: 100px;
+        padding: 20px 40px;
+        font-size: 24px;
+        background-color: rgb(9, 178, 178);
+        border: none;
         border-radius: 10px;
       }
-      .flex-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      body {
+        text-align: center;
+      }
+      input {
+        padding: 20px 30px;
+        font-size: 24px;
       }
     </style>
   </head>
   <body>
-    <div class="calc">
-      <div class="flex-box">
-        <div class="flex">
-          <label for="" class="value">First value</label>
-          <input type="text" />
-        </div>
-        <div class="flex">
-          <label for="" class="value">Second value</label>
-          <input type="text" />
-        </div>
-      </div>
-      <div class="button">
-        <button>+</button>
-        <button>-</button>
-        <button>*</button>
-        <button>/</button>
-      </div>
-    </div>
+    <label for="">FIR NUMBER</label>
+    <input type="text" id="fn" /> <br />
+    <label for="">SEC NUMBER</label>
+    <input type="text" id="sn" />
+    <br />
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()">/</button>
+    <br />
+    <input type="text" id="result" />
+    <script>
+      function add() {
+        let first_num = parseInt(document.getElementById("fn").value);
+        let Second_num = parseInt(document.getElementById("sn").value);
+        let total = first_num + Second_num;
+        document.getElementById("result").value = total;
+      }
+      function sub() {
+        let first_num = parseInt(document.getElementById("fn").value);
+        let Second_num = parseInt(document.getElementById("sn").value);
+        let total = first_num - Second_num;
+        document.getElementById("result").value = total;
+      }
+      function mul() {
+        let first_num = parseInt(document.getElementById("fn").value);
+        let Second_num = parseInt(document.getElementById("sn").value);
+        let total = first_num * Second_num;
+        document.getElementById("result").value = total;
+      }
+      function div() {
+        let first_num = parseInt(document.getElementById("fn").value);
+        let Second_num = parseInt(document.getElementById("sn").value);
+        let total = first_num / Second_num;
+        document.getElementById("result").value = total;
+      }
+    </script>
   </body>
 </html>
