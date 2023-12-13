@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <input type="text" id="arma" value="" placeholder="type here" />
+    <button onclick="clickMe()">press here</button>
+    <p id="unique">Lorem ipsum dolor sit amet.</p>
+    <p id="display">see here</p>
+    <script>
+      function clickMe() {
+        let a = document.getElementById("arma").value;
+        document.getElementById("display").innerText = a; //here a is the upper line //inner text means the text inside the p tag should be equal to let a.
+        document.getElementById("unique").style.fontSize = "40px";
+      }
+    </script>
+  </body>
+</html>

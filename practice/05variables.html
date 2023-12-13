@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <h1>There are 3 types of variables</h1>
+    <h3>1. var</h3>
+    <h3>2. let</h3>
+    <h3>3. const</h3>
+
+    <h2>NOTE:</h2>
+
+    <p>in var we can re-declare and re-assign</p>
+    <p>in let we cannot re-declare but we can re-assign</p>
+    <p>in const we cannot re-declare or re-assign</p>
+    <script>
+      //var
+
+      var deepak = 10;
+      var deepak = 100; //we can re-declare
+      deepak = 200; //we can re-assign
+      console.log("deepak", deepak);
+
+      //let
+
+      let rahul = 999;
+      //let rahul = 1000;   //we cannot re-declare
+      rahul = 1500; //we can re-assign
+      console.log("rahul", rahul);
+
+      //const
+
+      const tarun = 3000;
+      //   const tarun =3000; // we cannot re-declare
+      // tarun =4000; //we cannot re-assign
+      console.log("tarun", tarun);
+    </script>
+  </body>
+</html>

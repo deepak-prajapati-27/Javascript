@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataTypes</title>
+  </head>
+  <body>
+    <h2>There are 2 types of DataTypes</h2>
+    <h4>1.Premitive</h4>
+    <h5>In Premitive there are 7 types of DataTypes</h5>
+    <p>
+      1.string <br />2.number <br />3.bigInt <br />4.boolean <br />5.symbol
+      <br />6.null <br />7.undifined
+    </p>
+    <p>
+      string is always written in double quotes ("abc") or single quotes ('xyz')
+      or backticks(`hello`)
+    </p>
+    <p></p>
+    <h4>2.Non-Premitive</h4>
+    <h5>In Non-Premitive there are 2 types of DataTypes</h5>
+
+    <p>
+      1.array <br />
+      2.object
+    </p>
+
+    <script>
+      //string
+
+      //double quote
+
+      let a = "deepak";
+      console.log(a);
+      console.log(typeof a); //string
+
+      //single quote
+      let b = "tarun";
+      console.log(b);
+      console.log(typeof b); //string
+
+      //backticks
+      let c = `rahul`;
+      console.log(c);
+      console.log(typeof c); //string
+
+      //number
+
+      let deepak = 10;
+      console.log(deepak);
+      console.log(typeof deepak); //number
+
+      //  BigInt
+
+      let tarun = 94379397393399393939393n;
+      console.log(tarun);
+      console.log(typeof tarun); //bigInt
+
+      //boolean
+
+      let gaurav = true;
+      console.log(gaurav);
+      console.log(typeof gaurav); //boolean
+
+      let arma = false;
+      console.log(arma);
+      console.log(typeof arma); //boolean
+
+      //symbol
+
+      let vansh = Symbol("@");
+      console.log(vansh);
+      console.log(typeof vansh); //symbol
+
+      //null
+
+      let viru = null;
+      console.log(viru);
+      console.log(typeof viru); //object
+
+      //undefined
+
+      let punit;
+      console.log(punit);
+      console.log(typeof punit); //
+
+      //array
+
+      let marks = [10, 200, "deepak", 40, 22];
+      console.log(marks);
+      console.log(marks.length); //this is used to know the length of the data we stored
+      console.log(marks[0]); //this is used to find the data by giving numbers
+      console.log(typeof marks);
+
+      //object
+
+      let product = {
+        name: "iphone",
+        model: "15 pro",
+        price: 100000,
+        availabe: "yes",
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.availabe);
+      console.log(typeof product);
+      console.log(typeof product.price);
+    </script>
+  </body>
+</html>

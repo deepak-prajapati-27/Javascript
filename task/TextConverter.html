@@ -10,53 +10,155 @@
         padding: 0;
         box-sizing: border-box;
       }
-      .main-div {
+      body{
+        background:url(../images/whitebg.jpg) no-repeat center center/cover ;
+
+      }
+      .input_type{
+        padding: 20px;
+        width: 50%;
+        height: 90px;
+        border: none;
+        background-color:pink;
+        color:black;
+        border-radius: 10px;
+        box-shadow: rgba(240, 130, 46, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+        font-size: 40px;
+        margin-top: 20px
+      }
+      .parent{
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 10% auto;
-        width: 90%;
-        background-color: aqua;
+        flex-direction: column;
         gap: 20px;
-        padding: 20px;
-      }
-      .child-div {
         width: 100%;
       }
-      .child-2-div button {
-        border: none;
-        padding: 10px 20px;
-        font-size: 20px;
-        background-color: brown;
-      }
-      .text {
-        background-color: transparent;
-        width: 100%;
-        font-size: 20px;
-        border: none;
-        border: 1px solid #000000;
+      button{
         padding: 20px;
+        width: 300px;
+        background-color: rgb(196, 255, 254);
+        cursor: pointer;
+        border: none;
+        border-radius: 30px 30px 0px 30px ;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
       }
-      ::placeholder {
-        font-size: 20px;
-        color: #222;
+      button:hover{
+        background-color:black;
+        color: bisque;
+        padding: 25px ;
+        width: 310px;
+        
       }
+      .child{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 50%;
+        align-items: center;
+        column-gap: 50px;
+        
+      }
+      .word_change{
+        background-color: #e7ab8f;
+        color: black;
+        width: 360%;
+        height: 50px;
+        font-size: 15px;
+        text-align: center;
+        border-radius: 10px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;;
+      }
+      .result ::placeholder{
+        color: black;
+      }
+      .result{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+     #unique{
+      padding-top: 20px;
+     }
+     input:focus
+     
+     {
+      outline: none;
+     }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Montserrat&family=Outfit:wght@400;500;600&family=Rubik+Bubbles&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="main-div">
-      <div class="child-div">
-        <input type="text" class="text" placeholder="type anything" />
+
+    <div class="container">
+      
+        <div class="parent">
+        <input type="text" id="word" value="" placeholder="Type Here ..." class="input_type"/>
+        <p>NOTE: For word count and character count see at the end of the page !!!!!!!!</p>
+        <div class="child">
+        <button onclick="uppercase()">Uppercase</button>
+        <button onclick="lowercase()">Lowercase</button>
+        <button onclick="clear()">Clear</button>
+        <button onclick="wordcount()">Word Count</button>
+        <button onclick="trim()">Trim</button>
+        <button onclick="spaceremove()">Space Remove</button>
+        <button onclick="charcount()">Character Count</button>
+        <button onclick="fnr()">Find And Replace</button>
       </div>
-      <div class="child-2-div">
-        <button>lowercase</button>
-        <button>uppercase</button>
-        <button>trim</button>
-        <button>find & Replace</button>
-        <button>character count</button>
+      <div class="result">
+        <input type="text" name="" id="new_word" class="word_change" placeholder="Type here the word you want to replace">
+        <input type="text" name="" id="replace_word" class="word_change" placeholder="Type here the word you want to replace with">
+       
+          <span id="unique" class="word_change">RESULT</span>
+        
       </div>
     </div>
-    <script></script>
+      </div>
+    </div>
+    <script>
+function uppercase() {
+    let a = document.getElementById("word").value;
+    document.getElementById("word").value = a.toUpperCase();
+}
+function lowercase(){
+    let b= document.getElementById("word").value;
+    document.getElementById("word").value = b.toLowerCase();
+}
+function clear(){
+ document.getElementById("word").value = '';
+}
+function wordcount(){
+    let c=document.getElementById("word").value ;
+    document.getElementById("unique").innerText = c.trim().split(/\s+/).length;
+}
+function trim(){
+    let d=document.getElementById("word").value;
+    document.getElementById("word").value = d.trim();
+}
+function spaceremove(){
+  let e=document.getElementById("word").value;
+  document.getElementById("word").value = e.split(" ").join("");
+}
+function charcount(){
+  let f=document.getElementById("word").value;
+  document.getElementById("unique").innerText=f.length;
+}
+function fnr(){
+  let g=document.getElementById("word").value;
+  let h=document.getElementById("new_word").value;
+  let i=document.getElementById("replace_word").value;
+  document.getElementById("word").value =g.replace(h, i);
+
+}
+
+    </script>
   </body>
 </html>

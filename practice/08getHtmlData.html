@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Html Data</title>
+  </head>
+  <body>
+    <input type="text" class="deepak" id="arma" name="tarun" value="laptop" />
+    <input type="text" class="deepak" id="rahul" value="gaurav" />
+    <script>
+      let a = document.getElementById("arma");
+      console.log(a);
+      console.log(a.value); //laptop will be displayed
+
+      let b = document.getElementsByClassName("deepak");
+      console.log(b);
+      console.log(b.value); //undefined will come as there are many same class
+
+      let c = document.getElementsByName("tarun");
+      console.log(c);
+      console.log(c.value); //undefined will come as there are many same name
+
+      let d = document.getElementsByTagName("input");
+      console.log(d);
+      console.log(d.value); //undefined will come as there are many same tags
+
+      let e = document.querySelectorAll("input");
+      console.log(e);
+      console.log(e.value); //undefined will come as there are many same tags
+    </script>
+  </body>
+</html>
