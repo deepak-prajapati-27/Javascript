@@ -33,6 +33,9 @@
       input:focus {
         outline: none;
       }
+      input::placeholder {
+        font-size: 30px;
+      }
       button {
         width: 20%;
         height: 50px;
@@ -56,7 +59,12 @@
     <div class="main_div">
       <div class="parent">
         <h1>RESULT METER</h1>
-        <input type="text" name="" id="input_type" />
+        <input
+          type="text"
+          name=""
+          id="input_type"
+          placeholder="ENTER YOUR MARKS !!!"
+        />
         <button onclick="clickMe()">click me</button>
       </div>
     </div>
