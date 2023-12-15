@@ -151,6 +151,16 @@
         justify-content: center;
         align-items: center;
       }
+      .input_box {
+        position: relative;
+      }
+      .hide {
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 60px;
+        display: none;
+      }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -172,7 +182,13 @@
                 id=""
                 placeholder="Phone number, username, or email"
               />
-              <input type="password" name="" id="" placeholder="Password" />
+              <input
+                type="password"
+                name=""
+                id="password"
+                placeholder="Password"
+              />
+              <p class="hide" id="show" onclick="hide()">Show</p>
               <button class="login_button">Log in</button>
             </div>
             <div class="or_main_div">
@@ -223,6 +239,8 @@
       <p>Contact Uploading & Non_users</p>
       <p>Meta Verifieds</p>
     </footer>
-    <script></script>
+    <script>
+      function hide() {}
+    </script>
   </body>
 </html>
