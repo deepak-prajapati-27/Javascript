@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dark Mode Double Button</title>
     <style>
       * {
         margin: 0;
@@ -39,18 +39,16 @@
       Perspiciatis molestias eos numquam corrupti tempore at natus id! Quisquam,
       assumenda. Sint, inventore? Qui, odit earum.
     </p>
-    <button onclick="on()">ON/OFF</button>
+    <button onclick="on()">ON</button>
+    <button onclick="off()">OFF</button>
     <script>
       function on() {
-        if (
-          document.getElementById("unique").style.backgroundColor !== "black"
-        ) {
-          document.getElementById("unique").style.backgroundColor = "black";
-          document.getElementById("p_tag").style.color = "white";
-        } else {
-          document.getElementById("unique").style.backgroundColor = "white";
-          document.getElementById("p_tag").style.color = "black";
-        }
+        document.getElementById("unique").style.backgroundColor = "black";
+        document.getElementById("unique").style.color = "white";
+      }
+      function off() {
+        document.getElementById("unique").style.backgroundColor = "white";
+        document.getElementById("unique").style.color = "black";
       }
     </script>
   </body>
