@@ -187,8 +187,9 @@
                 name=""
                 id="password"
                 placeholder="Password"
+                onclick="password()"
               />
-              <p class="hide" id="show" onclick="hide()">Show</p>
+              <p class="hide" id="show" onclick="show()">Show</p>
               <button class="login_button">Log in</button>
             </div>
             <div class="or_main_div">
@@ -240,7 +241,19 @@
       <p>Meta Verifieds</p>
     </footer>
     <script>
-      function hide() {}
+      function password() {
+        document.getElementById("show").style.display = "block";
+      }
+      function show() {
+        let a = document.getElementById("password");
+        if (a.type === "password") {
+          document.getElementById("show").innerText = "Hide";
+          a.type = "text";
+        } else {
+          document.getElementById("show").innerText = "Show";
+          a.type = "password";
+        }
+      }
     </script>
   </body>
 </html>
